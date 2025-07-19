@@ -76,7 +76,7 @@ jobs:
             git tag "v$newVersionName"
             git push --follow-tags
           fi
-
+         
       - name: Signing properties
         env:
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
