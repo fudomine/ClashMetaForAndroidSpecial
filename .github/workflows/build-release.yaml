@@ -91,6 +91,12 @@ jobs:
           echo "cat signing.properties"
           cat signing.properties
 
+      - name: Check signing.properties exists
+        run: |
+          ls -l
+          echo "=== signing.properties content ==="
+          cat signing.properties || echo "signing.properties NOT FOUND"
+
       - name: Release Build
         if: success()
         run: ./gradlew --no-daemon app:assembleMetaRelease
