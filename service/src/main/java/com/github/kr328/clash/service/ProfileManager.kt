@@ -141,7 +141,7 @@ class ProfileManager(private val context: Context) : IProfileManager,
         try {
             val request = Request.Builder()
                 .url(old.source)
-                .header("User-Agent", "ClashforWindows/0.19.23")
+                .header("User-Agent", "WMOspecial/0.19.23")
                 .build()
 
             client.newCall(request).execute().use { response ->
